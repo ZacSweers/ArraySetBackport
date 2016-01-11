@@ -1,9 +1,9 @@
 ArraySetBackport
 =========
 
-Backport of the [ArraySet](arrayset) implementation from Android Lollipop. Functionally, it's
+Backport of the [ArraySet][arrayset] implementation from Android Lollipop. Functionally, it's
 nearly identical to the original code, with some minor tweaks to use the same structure that 
-[ArrayMap](arraymap) uses to support older version. This should be treated as a mirror, and not 
+[ArrayMap][arraymap] uses to support older version. This should be treated as a mirror, and not 
 necessarily a unique implementation.
 
 My hope is that Google will eventually put ArraySet in the support library like they did with 
@@ -15,7 +15,7 @@ Usage
 *(From the AOSP documentation)*
 
 ArraySet is a generic set data structure that is designed to be more memory efficient than a 
-traditional [HashSet](hashet). The design is very similar to [ArrayMap](arraymap), with all 
+traditional [HashSet][hashet]. The design is very similar to [ArrayMap][arraymap], with all 
 of the caveats described there. This implementation is separate from ArrayMap, however, so the 
 Object array contains only one item for each entry in the set (instead of a pair for a mapping).
 
@@ -38,7 +38,7 @@ Download
 compile 'io.sweers.arraysetbackport:arraysetbackport:1.0.0'
 ```
 
-Snapshots of the development version are available in [Sonatype's snapshots repository](snapshots).
+Snapshots of the development version are available in [Sonatype's snapshots repository][snapshots].
 
 License
 -------
