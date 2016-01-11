@@ -7,7 +7,7 @@ nearly identical to the original code, with some minor tweaks to use the same st
 necessarily a unique implementation.
 
 My hope is that Google will eventually put ArraySet in the support library like they did with 
-ArrayMap. Until then, I'm using this.
+ArrayMap.
 
 Usage
 -----
