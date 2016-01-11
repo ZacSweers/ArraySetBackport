@@ -35,7 +35,7 @@ Download
 --------
 
 ```groovy
-compile 'io.sweers.arraysetbackport:arraysetbackport:0.1.0'
+compile 'io.sweers.arraysetbackport:arraysetbackport:0.1.0-alpha1'
 ```
 
 Snapshots of the development version are available in [Sonatype's snapshots repository](snapshots).
