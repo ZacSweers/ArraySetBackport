@@ -14,7 +14,7 @@ Usage
 *(From the AOSP documentation)*
 
 ArraySet is a generic set data structure that is designed to be more memory efficient than a 
-traditional [HashSet][hashet]. The design is very similar to [ArrayMap][arraymap], with all 
+traditional [HashSet][hashset]. The design is very similar to [ArrayMap][arraymap], with all 
 of the caveats described there. This implementation is separate from ArrayMap, however, so the 
 Object array contains only one item for each entry in the set (instead of a pair for a mapping).
 
