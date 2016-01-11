@@ -1,0 +1,58 @@
+subprojects {
+    buildscript {
+        repositories {
+            jcenter()
+            mavenCentral()
+        }
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    group = GROUP
+    version = VERSION_NAME
+
+    // The default 'assemble' task only applies to normal variants. Add test variants as well.
+    afterEvaluate {
+        android.testVariants.all { variant ->
+            tasks.getByName('assemble').dependsOn variant.assemble
+        }
+
+        // TODO Why does android studio hiccup on this?
+//        tasks.withType(com.android.build.gradle.internal.tasks.AndroidTestTask.getClass()) { task ->
+//            task.doFirst {
+//                logging.level = LogLevel.INFO
+//            }
+//            task.doLast {
+//                logging.level = LogLevel.LIFECYCLE
+//            }
+//        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    androidPlugin = 'com.android.tools.build:gradle:2.0.0-alpha3'
+    minSdkVersion = 14
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.2'
+
+    ci = 'true'.equals(System.getenv('CI'))
+
+    def supportVersion = '23.1.1'
+    supportAnnotations = "com.android.support:support-annotations:$supportVersion"
+    supportV4 = "com.android.support:support-v4:$supportVersion"
+
+    junit = 'junit:junit:4.12'
+    robolectric = 'org.robolectric:robolectric:3.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
