@@ -1,7 +1,7 @@
 ArraySetBackport
 =========
 
-Backport of the [ArraySet][arrayset] implementation from Android Lollipop. Functionally, it's
+Backport of the [ArraySet][arrayset] implementation from Android Marshmallow. Functionally, it's
 nearly identical to the original code, with some minor tweaks to use the same structure that 
 [ArrayMap][arraymap] uses to support older version.
 
