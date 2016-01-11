@@ -47,7 +47,7 @@ import java.util.Set;
  * item, it may reduce the capacity to better match the current size.  In the future an
  * explicit call to set the capacity should turn off this aggressive shrinking behavior.</p>
  */
-public final class ArraySet<E> implements Collection<E>, Set<E> {
+public class ArraySet<E> implements Collection<E>, Set<E> {
     private static final boolean DEBUG = false;
     private static final String TAG = "ArraySet";
 
