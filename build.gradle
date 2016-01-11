@@ -2,13 +2,11 @@ subprojects {
     buildscript {
         repositories {
             jcenter()
-            mavenCentral()
         }
     }
 
     repositories {
         jcenter()
-        mavenCentral()
     }
 
     group = GROUP
@@ -19,16 +17,6 @@ subprojects {
         android.testVariants.all { variant ->
             tasks.getByName('assemble').dependsOn variant.assemble
         }
-
-        // TODO Why does android studio hiccup on this?
-//        tasks.withType(com.android.build.gradle.internal.tasks.AndroidTestTask.getClass()) { task ->
-//            task.doFirst {
-//                logging.level = LogLevel.INFO
-//            }
-//            task.doLast {
-//                logging.level = LogLevel.LIFECYCLE
-//            }
-//        }
     }
 }
 

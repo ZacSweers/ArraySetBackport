@@ -32,8 +32,17 @@ android {
     }
 
     lintOptions {
-        textReport true
+        warning 'MissingTranslation'
+        abortOnError true
+        check 'NewApi', 'InlinedApi'
+        fatal 'NewApi', 'InlinedApi'
+        checkReleaseBuilds true
+
+        textReport rootProject.ext.ci
         textOutput 'stdout'
+
+        htmlReport !rootProject.ext.ci
+        xmlReport !rootProject.ext.ci
     }
 
     buildTypes {
