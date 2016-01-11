@@ -3,8 +3,7 @@ ArraySetBackport
 
 Backport of the [ArraySet][arrayset] implementation from Android Lollipop. Functionally, it's
 nearly identical to the original code, with some minor tweaks to use the same structure that 
-[ArrayMap][arraymap] uses to support older version. This should be treated as a mirror, and not 
-necessarily a unique implementation.
+[ArrayMap][arraymap] uses to support older version.
 
 My hope is that Google will eventually put ArraySet in the support library like they did with 
 ArrayMap.
