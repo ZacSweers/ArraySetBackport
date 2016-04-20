@@ -25,7 +25,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    androidPlugin = 'com.android.tools.build:gradle:2.0.0-alpha8'
+    androidPlugin = 'com.android.tools.build:gradle:2.0.0'
     minSdkVersion = 14
     compileSdkVersion = 23
     buildToolsVersion = '23.0.2'
@@ -41,6 +41,6 @@ ext {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.10'
+    gradleVersion = '2.12'
     distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }
