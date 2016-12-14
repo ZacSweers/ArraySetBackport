@@ -1,3 +1,6 @@
+DEPRECATED: ArraySet is now in the support library as of 25.1.0
+===============================================================
+
 ArraySetBackport
 =========
 
